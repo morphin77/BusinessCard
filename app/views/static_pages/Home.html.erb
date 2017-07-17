@@ -1,0 +1,12 @@
+<h1 class="choose_language_note">Choose language / Выберите язык</h1>
+<div class="left_locale_button">
+  <%= link_to about_path(locale: :en), class: "button" do%>
+    <%= image_tag "256united-kingdom.png" %>
+  <% end %>
+</div>
+
+<div class="right_locale_button">
+  <%= link_to about_path(locale: :ru), class:"button" do %>
+    <%= image_tag "256russia.png"%>
+  <% end %>
+</div>
