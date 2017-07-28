@@ -2,3 +2,9 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+#about, #freelance-profiles {
+  li{
+    list-style-type: none;
+  }
+}

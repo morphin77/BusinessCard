@@ -8,14 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body class="skin-blue sidebar-mini fixed">
+  <body class="skin-blue-light sidebar-mini fixed">
     <div class="wrapper">
       <%= render 'layouts/header' %>
       <%= render 'layouts/aside' %>
       <div class="content-wrapper">
-        <section class="content-header">
-          <h1><%= @title %></h1>
-        </section>
         <section class="content">
           <div class="row">
             <%= yield %>
