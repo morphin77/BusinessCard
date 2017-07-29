@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  previw_path: MyString
+  demo: MyString
+  git_path: MyString
+  gems: MyString
+  active: false
+
+two:
+  previw_path: MyString
+  demo: MyString
+  git_path: MyString
+  gems: MyString
+  active: false

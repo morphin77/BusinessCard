@@ -19,6 +19,8 @@ gem 'devise'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+
+gem 'pg'
 #--------------------------------------------
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

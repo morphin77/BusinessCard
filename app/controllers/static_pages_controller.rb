@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
 
   def portfolio
     @title="Portfolio"
+    @portfolio_items = PortfolioItem.where(active: "t").order(:created_at)
   end
 
   def contacts
