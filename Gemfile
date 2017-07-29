@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-#Not Default  Gems
+#Installed Gems
+#--------------------------------------------
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
@@ -13,6 +14,12 @@ gem 'font-awesome-sass'
 source 'https://rails-assets.org/' do
   gem 'rails-assets-adminlte'
 end
+gem 'activeadmin'
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+#--------------------------------------------
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
