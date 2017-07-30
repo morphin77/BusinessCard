@@ -1,34 +1,23 @@
-<div class="col-md-12">
-  <div class="box box-primary">
-    <div class="box-header">
-      <h3 class="box-title">Portfolio</h3>
-    </div>
-    <div class="box-body table-responsive no-padding">
-      <table class="table table-hover">
-        <tr>
-          <td>Title</td>
-          <td>Description</td>
-          <td>Prview</td>
-          <td>Demo_path</td>
-          <td>Git_path</td>
-          <td>Is Finished?</td>
-          <td>Tehnologies</td>
-        </tr>
-        <% @portfolio_items.each do |item|%>
-        <tr>
-          <td><%= item.title %></td>
-          <td><%= item.description %></td>
-          <td><%= item.previw_path %></td>
-          <td><%= item.demo %></td>
-          <td><%= item.git_path %></td>
-          <td><%= item.finished %></td>
-          <td><%= item.technologies %></td>
-        </tr>
-      <% end%>
-    </table>
-    </div>
-    <div class="box-footer">
-
+<% @portfolio_items.each do |item|%>
+  <div class="col-md-6">
+    <div class="box box-primary">
+      <div class="box-body">
+        <%= image_tag item.preview.url, class: "img-responsive img-rounded" %>
+        <h3 class="profile-username text-center"><%= item.title %></h3>
+        <p class="text-muted text-center"><%= item.description %></p>
+        <% if item.finished==false %>
+        <ul class="list-group list-group-unbordered">
+          <li class="list-group-item">
+            <b>Статус</b><p class="text-red pull-right">Не завершен</p>
+          </li>
+        </ul>
+        <% end %>
+        <%= item.technologies %>
+      </div>
+      <div class="box-footer">
+        <%= link_to 'Demo', item.demo, target: :_blank %>
+        <%= link_to 'Git Repository', item.git_path, target: :_blank %>
+      </div>
     </div>
   </div>
-</div>
+<% end%>

@@ -21,6 +21,7 @@ gem 'draper'
 gem 'pundit'
 
 gem 'pg'
+gem "paperclip"
 #--------------------------------------------
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
