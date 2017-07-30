@@ -1,11 +1,23 @@
-<div class="box box-primary col-md-12">
-  <div class="box-header">
-    <h3 class="box-title">Portfolio</h3>
+<% @portfolio_items.each do |item|%>
+  <div class="col-md-6">
+    <div class="box box-primary">
+      <div class="box-body">
+        <%= image_tag item.preview.url, class: "img-responsive img-rounded" %>
+        <h3 class="profile-username text-center"><%= item.title %></h3>
+        <p class="text-muted text-center"><%= item.description %></p>
+        <% if item.finished==false %>
+        <ul class="list-group list-group-unbordered">
+          <li class="list-group-item">
+            <b>Статус</b><p class="text-red pull-right">Не завершен</p>
+          </li>
+        </ul>
+        <% end %>
+        <%= item.technologies %>
+      </div>
+      <div class="box-footer">
+        <%= link_to 'Demo', item.demo, target: :_blank %>
+        <%= link_to 'Git Repository', item.git_path, target: :_blank %>
+      </div>
+    </div>
   </div>
-  <div class="box-body table-responsive no-padding">
-
-  </div>
-  <div class="box-footer">
-
-  </div>
-</div>
+<% end%>

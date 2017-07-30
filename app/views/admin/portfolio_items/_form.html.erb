@@ -1,0 +1,13 @@
+<%= semantic_form_for [:admin, @portfolio_item], builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs "Portfolio Item information" do %>
+    <%= f.input :title%>
+    <%= f.input :demo %>
+    <%= f.input :git_path %>
+    <%= f.input :technologies %>
+    <%= f.input :description%>
+    <%= f.file_field :preview, label: "Select image" %>
+    <%= f.input :finished, :label => "Is it project finished?" %>
+    <%= f.input :active, :label => "Display this item?" %>
+  <% end %>
+  <%= f.actions %>
+<% end %>

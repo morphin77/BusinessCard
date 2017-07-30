@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :set_params_for_aside
+
   def about
     @title="About"
   end
@@ -17,5 +19,10 @@ class StaticPagesController < ApplicationController
 
   def publications
     @title="Publication"
+  end
+
+  private
+  def set_params_for_aside
+    @portfolio_items = PortfolioItem.where(active: true)
   end
 end
