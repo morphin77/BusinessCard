@@ -26,6 +26,7 @@ class StaticPagesController < ApplicationController
 
   private
   def set_params_for_aside
-    @portfolio_items = PortfolioItem.where(active: true)
+    @portfolio_items = PortfolioItem.where(display: true)
+    @publications = Publication.where(display: true)
   end
 end

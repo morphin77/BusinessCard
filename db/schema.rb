@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801083246) do
+ActiveRecord::Schema.define(version: 20170801111337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20170801083246) do
     t.string "demo"
     t.string "git_path"
     t.string "technologies"
-    t.boolean "active", default: false
+    t.boolean "display", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
@@ -80,6 +80,16 @@ ActiveRecord::Schema.define(version: 20170801083246) do
     t.string "preview_content_type"
     t.integer "preview_file_size"
     t.datetime "preview_updated_at"
+  end
+
+  create_table "publications", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "resource_name"
+    t.string "link"
+    t.boolean "display"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

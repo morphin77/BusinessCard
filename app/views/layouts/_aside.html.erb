@@ -14,15 +14,17 @@
         <% end %>
       </li>
       <li>
-        <% if @portfolio_items.present? %>
+        <% if @portfolio_items.exists? %>
           <%= link_to portfolio_path do %>
             <i class="fa fa-briefcase"></i> <span>Портфолио</span>
           <% end %>
         <% end %>
       </li>
       <li>
-        <%= link_to publications_path do %>
-          <i class="fa fa-book"></i> <span>Статьи</span>
+        <% if @publications.exists? %>
+          <%= link_to publications_path do %>
+            <i class="fa fa-book"></i> <span>Статьи</span>
+          <% end %>
         <% end %>
       </li>
       <li>

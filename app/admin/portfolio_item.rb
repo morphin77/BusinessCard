@@ -1,5 +1,5 @@
 ActiveAdmin.register PortfolioItem do
-  permit_params :previw_path, :demo, :git_path, :technologies, :active, :title, :description, :finished, :preview
+  permit_params :previw_path, :demo, :git_path, :technologies, :display, :title, :description, :finished, :preview
 
   index do
     column :title
