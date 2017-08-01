@@ -20,7 +20,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        MessageNotificationMailer.interlocutor_email.deliver_now
+        #MessageNotificationMailer.interlocutor_email.deliver_now
         format.html { redirect_to contacts_path, notice: 'Mail was successfully created.' }
       else
         format.html { redirect_to contacts_path, notice: 'Oops. We have some problem. Please try again later.' }
@@ -54,6 +54,6 @@ class MessagesController < ApplicationController
     end
 
     def mail_params
-      params.require(:message).permit(:subject, :message_body)
+      params.require(:message).permit(:email, :full_name, :subject, :message_body, :is_read)
     end
 end
