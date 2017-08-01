@@ -15,7 +15,10 @@ class StaticPagesController < ApplicationController
 
   def contacts
     @title="Contacts"
+    @message=Message.new
   end
+
+
 
   def publications
     @title="Publication"

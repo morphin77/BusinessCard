@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get '/about', to: 'static_pages#about', as: 'patient'

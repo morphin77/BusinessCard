@@ -1,0 +1,26 @@
+<%= form_for @message do |form| %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :message_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name, id: :message_full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :message_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message_body %>
+    <%= form.text_field :message_body, id: :message_message_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
