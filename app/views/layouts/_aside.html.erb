@@ -9,11 +9,6 @@
         <% end %>
       </li>
       <li>
-        <%= link_to cv_path do %>
-          <i class="fa fa-address-card"></i> <span>CV</span>
-        <% end %>
-      </li>
-      <li>
         <% if @portfolio_items.exists? %>
           <%= link_to portfolio_path do %>
             <i class="fa fa-briefcase"></i> <span>Портфолио</span>

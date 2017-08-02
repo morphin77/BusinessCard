@@ -46,16 +46,6 @@ ActiveRecord::Schema.define(version: 20170801111337) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "generates", force: :cascade do |t|
-    t.string "Message"
-    t.string "email"
-    t.string "phone"
-    t.string "subject"
-    t.string "message_body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "messages", force: :cascade do |t|
     t.string "email"
     t.string "subject"

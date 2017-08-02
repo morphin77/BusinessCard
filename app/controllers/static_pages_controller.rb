@@ -5,10 +5,6 @@ class StaticPagesController < ApplicationController
     @title="About"
   end
 
-  def cv
-    @title="CV"
-  end
-
   def portfolio
     @title="Portfolio"
   end

@@ -20,7 +20,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        #MessageNotificationMailer.interlocutor_email.deliver_now
+        MessageNotificationMailer.interlocutor_email.deliver_now
         format.html { redirect_to contacts_path, notice: 'Mail was successfully created.' }
       else
         format.html { redirect_to contacts_path, notice: 'Oops. We have some problem. Please try again later.' }
