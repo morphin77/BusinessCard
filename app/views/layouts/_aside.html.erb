@@ -1,28 +1,28 @@
 <aside class="main-sidebar">
   <section class="sidebar">
     <ul class="sidebar-menu">
-      <li>
+      <li id="#Menu_About" class="active">
         <%= link_to root_url do %>
           <i class="fa fa-user"></i>
           <span>About</span>
           <span class="glyphicon glyphicon-chevron-left"></span>
         <% end %>
       </li>
-      <li>
-        <% if @portfolio_items.exists? %>
-          <%= link_to portfolio_path do %>
-            <i class="fa fa-briefcase"></i> <span>Портфолио</span>
-          <% end %>
+      <% if @portfolio_items.exists? %>
+      <li id="#Menu_Portfolio">
+        <%= link_to portfolio_path do %>
+        <i class="fa fa-briefcase"></i> <span>Портфолио</span>
         <% end %>
       </li>
-      <li>
-        <% if @publications.exists? %>
-          <%= link_to publications_path do %>
-            <i class="fa fa-book"></i> <span>Статьи</span>
-          <% end %>
+      <% end %>
+      <% if @publications.exists? %>
+      <li  id="#Menu_Publications ">
+        <%= link_to publications_path do %>
+          <i class="fa fa-book"></i> <span>Статьи</span>
         <% end %>
       </li>
-      <li>
+      <% end %>
+      <li id="#Menu_Contact">
         <%= link_to contacts_path do %>
           <i class="fa fa-phone"></i> <span>Контакты</span>
         <% end %>

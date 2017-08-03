@@ -4,15 +4,18 @@
     <div class="box box-primary">
       <div class="box-body">
           <%= image_tag item.preview.url, class: "img-responsive img-rounded" %>
-            <h3 class="profile-username text-center"><%= item.title %></h3>
-            <p class="text-muted text-center"><%= item.description %></p>
-          <% if item.finished==false %>
+          <h3 class="profile-username text-center"><%= item.title %></h3>
+          <p class="text-muted text-center"><%= item.description %></p>
           <ul class="list-group list-group-unbordered">
+            <% if item.finished==false %>
             <li class="list-group-item">
               <b>Статус</b><p class="text-red pull-right">Не завершен</p>
             </li>
+            <% end %>
+            <li class="list-group-item">
+              <b>Моя Роль</b><p class="text-green pull-right"><%= item.my_role %></p>
+            </li>
           </ul>
-          <% end %>
           <%= item.technologies %>
         </div>
         <div class="box-footer">

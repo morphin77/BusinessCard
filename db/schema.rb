@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801111337) do
+ActiveRecord::Schema.define(version: 20170803020305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20170801111337) do
     t.string "preview_content_type"
     t.integer "preview_file_size"
     t.datetime "preview_updated_at"
+    t.string "my_role"
   end
 
   create_table "publications", force: :cascade do |t|
