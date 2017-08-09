@@ -4,23 +4,19 @@
     <title>BusinesCard</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   </head>
-  <body class="skin-blue-light sidebar-mini fixed">
+  <body class="skin-blue-light layout-top-nav fixed">
     <div class="wrapper">
       <%= render 'layouts/header' %>
-      <%= render 'layouts/aside' %>
       <div class="content-wrapper">
         <section class="content">
           <div class="row">
             <%= yield %>
           </div>
         </section>
-        <script>
-          document.getElementsByClassName('sidebar-menu').onclick="$.fn.AsideMenuStyle"
-        </script>
       </div>
     </div>
   </body>

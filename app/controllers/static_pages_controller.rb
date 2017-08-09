@@ -14,8 +14,6 @@ class StaticPagesController < ApplicationController
     @message=Message.new
   end
 
-
-
   def publications
     @title="Publication"
   end

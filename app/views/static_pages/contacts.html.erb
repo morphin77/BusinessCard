@@ -1,87 +1,39 @@
 <div class="col-md-12">
   <div class="box box-primary">
     <div class="box-header">
-      <h3 class="box-title">Контакты</h3>
+      <h4 class="modal-title">
+        <i class="fa fa-pencil"></i>
+        Напишите мне
+      </h4>
     </div>
-    <div class="box-body table-responsive no-padding">
-      <table class="table table-hover">
-        <tr>
-          <td><i class="fa fa-phone"></i> Телефон</td>
-          <td>+7(931)418-12-99</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-whatsapp"></i> WhatsApp</td>
-          <td>+7(931)418-12-99</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-telegram"></i> Telegramm</td>
-          <td>+7(931)418-12-99</td>
-        </tr>
-        <tr>
-          <td>Viber</td>
-          <td>+7(931)418-12-99</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-envelope"></i> Email</td>
-          <td>olegkulakov77@gmail.com</td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-skype"></i> Skype</td>
-          <td></td>
-        </tr>
-      </table>
+    <div class="box-body">
+      <%= form_for @message do |form| %>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+          <%= form.email_field :email, id: :message_email, class:"form-control", placeholder:"Email" %>
+        </div>
+        </br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <%= form.text_field :full_name, id: :message_full_name, class:"form-control", placeholder:"Youre Name" %>
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-commenting"></i></span>
+          <%= form.text_field :subject, id: :message_subject, class:"form-control", placeholder:"Message Subject" %>
+        </div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-comment"></i></span>
+          <%= form.text_area :message_body, id: :message_message_body, class:"form-control", placeholder:"Message Text" %>
+        </div>
     </div>
     <div class="box-footer clearfix">
-      <button type="button" class="btn btn-block btn-primary btn-lg" data-toggle="modal" data-target="#modal-default">
-        Write me
-      </button>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal-default">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-
-        <h4 class="modal-title">
-          <i class="fa fa-pencil"></i>
-          Напишите мне
-        </h4>
-      </div>
-      <div class="modal-body">
-        <%= form_for @message do |form| %>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-            <%= form.email_field :email, id: :message_email, class:"form-control", placeholder:"Email" %>
-          </div>
-          </br>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <%= form.text_field :full_name, id: :message_full_name, class:"form-control", placeholder:"Youre Name" %>
-          </div>
-          <br>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-commenting"></i></span>
-            <%= form.text_field :subject, id: :message_subject, class:"form-control", placeholder:"Message Subject" %>
-          </div>
-          <br>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-comment"></i></span>
-            <%= form.text_area :message_body, id: :message_message_body, class:"form-control", placeholder:"Message Text" %>
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-        <%= button_tag type: 'submit', class: "pull-right btn btn-primary" do %>
-          Отправить
-          <i class="fa fa-arrow-circle-right"></i>
-        <% end %>
-        <% end %>
-      </div>
+      <%= button_tag type: 'submit', class: "pull-right btn btn-primary" do %>
+        Отправить
+        <i class="fa fa-arrow-circle-right"></i>
+      <% end %>
+      <% end %>
     </div>
   </div>
 </div>
