@@ -2,20 +2,20 @@ class StaticPagesController < ApplicationController
   before_action :set_params_for_aside
 
   def about
-    @title="About"
+    @title="Обо Мне"
   end
 
   def portfolio
-    @title="Portfolio"
+    @title="Портфолио"
   end
 
   def contacts
-    @title="Contacts"
+    @title="Контакты"
     @message=Message.new
   end
 
   def publications
-    @title="Publication"
+    @title="Публикации"
   end
 
   private

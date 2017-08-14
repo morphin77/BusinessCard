@@ -10,22 +10,22 @@
       <%= form_for @message do |form| %>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-          <%= form.email_field :email, id: :message_email, class:"form-control", placeholder:"Email" %>
+          <%= form.email_field :email, id: :message_email, class:"form-control", placeholder:"Ваш Email" %>
         </div>
         </br>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <%= form.text_field :full_name, id: :message_full_name, class:"form-control", placeholder:"Youre Name" %>
+          <%= form.text_field :full_name, id: :message_full_name, class:"form-control", placeholder:"Ваше Имя" %>
         </div>
         <br>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-commenting"></i></span>
-          <%= form.text_field :subject, id: :message_subject, class:"form-control", placeholder:"Message Subject" %>
+          <%= form.text_field :subject, id: :message_subject, class:"form-control", placeholder:"Тема обращения" %>
         </div>
         <br>
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-comment"></i></span>
-          <%= form.text_area :message_body, id: :message_message_body, class:"form-control", placeholder:"Message Text" %>
+          <%= form.text_area :message_body, id: :message_message_body, class:"form-control", placeholder:"Текст" %>
         </div>
     </div>
     <div class="box-footer clearfix">

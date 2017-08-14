@@ -1,6 +1,6 @@
 <% if @portfolio_items.exists? %>
   <% @portfolio_items.each do |item|%>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div class="box box-primary">
       <div class="box-body">
           <%= image_tag item.preview.url, class: "img-responsive img-rounded" %>
@@ -13,14 +13,14 @@
             </li>
             <% end %>
             <li class="list-group-item">
-              <b>Моя Роль</b><p class="text-green pull-right"><%= item.my_role %></p>
+              <b>Моя Роль</b><p class="pull-right"><%= item.my_role %></p>
             </li>
           </ul>
           <%= item.technologies %>
         </div>
         <div class="box-footer">
-          <%= link_to 'Demo', item.demo, target: :_blank %></br>
-          <%= link_to 'Git Repository', item.git_path, target: :_blank %>
+          <%= link_to 'Демо', item.demo, target: :_blank %></br>
+          <%= link_to 'Git Репозиторий', item.git_path, target: :_blank %>
         </div>
       </div>
     </div>
